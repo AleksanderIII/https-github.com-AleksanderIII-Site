@@ -1,11 +1,78 @@
-body{
-    padding: 0;
-    margin: 0;
+@font-face { 
+    font-family: "Gentium Book Basic"; 
+    src: url("../fonts/GenBkBasB.ttf") format("TrueType"); 
+    font-style: normal; 
+    font-weight: bold; 
+    } 
+@font-face { 
+        font-family: "Yeseva One"; 
+        src: url("../fonts/YesevaOne-Regular_v2.otf") format("OpenType"); 
+        font-style: normal; 
+        font-weight: normal; 
+} 
+@font-face { 
+    font-family: "Lato"; 
+    src: url("../fonts/Lato-Regular.ttf") format("OpenType"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+*{
+  margin: 0;
+  padding: 0;
 }
+
+  
+  input:required:invalid {
+    background-color: red;
+  }
+
+.Lato{
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 40px;
+    margin-bottom: 18px;
+}
+.gent{
+    font-family: "Gentium Book Basic";
+    font-weight: bold;
+    font-size: 25px;
+    color: #dde0df;
+    line-height: 45px;
+}
+span[class="OOO"]{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 96px;
+    font-weight: normal;
+    color:#f2f4f4 ;
+}
+.Yeseva{
+    font-family: "Yeseva One";
+    font-size: 21px;
+    font-weight: normal;
+    color: #c89f2d;
+    line-height: 35px;
+}
+h2[class='Yeseva2'] {
+    font-family: "Yeseva One";
+    font-size: 36px;
+    font-weight: normal;
+    color: white;
+}
+body{
+  width: 100%;
+  max-width: 1600px;
+  margin:0 auto;
+  padding: 0;   
+}
+
+.wrapper{
+  min-height: calc(100vh - 320px);
+}
+
 header{
   background: url(../img/Background1.png) no-repeat center top/cover;
-  
-
+  padding-bottom: 140px;
 }
 
 
@@ -14,7 +81,7 @@ header{
   margin: 0 auto;
 }
 .Container1{
-    background: url(../img/Menu-Background.png)no-repeat center top/cover;
+    background: url(../img/Menu-Background.png)repeat-x ;
 
     width: 100%;
     margin: 0 auto;
@@ -26,11 +93,13 @@ header{
     text-decoration: none;
     color:black;
     text-transform: uppercase;
-    font-size: 36.03pt;
-    font-family: 'Yeseva One',serif;
-    font-weight: normal;
+   
+   
+    margin-left: 5px;
+    letter-spacing: 0.1px;
 }
 nav{
+    margin-left: 238px;
     float: left;
     margin-top: 49px;
 }
@@ -40,29 +109,47 @@ div{
 }
 
 .Navigation{
+   
     padding: 0;
     margin: 0;
     display: block;
 }
 
 .Navigation li{
+    
     float: left;
     display: block;
-    margin-left: 50 px;
+    
+}
+.Navigation li:nth-child(n+2){
+    margin-left: 52px;
 }
 
 .Navigation a{
     text-decoration: none;
     color:white;
     font-family:"Gentium Book Basic",serif;
-    font-size:21pt;
+    font-size:20px;
     font-weight: bold;
+    letter-spacing: .35px;
+    
 }
+
+.Navigation li a:hover {
+   border-top:rgba(255,255,255,.71) solid 4px;
+   padding-top:46px;
+   
+  }
+
+
+
+
 .SocNetworks{
     padding: 0;
     margin: 0;
-    margin-top: 52px;
+    margin-top: 48px;
     float: right;
+   margin-right: 40px;
 }
 .SocNetworks img{
   margin-left: 15px;
@@ -73,46 +160,229 @@ div{
   width: 100%;
   clear: both;
 }
-.titles{
-    padding: 0;
-    margin: 0;
-}
+
 h1{
+    margin-top: 56px;
+    font-family: "Yeseva One";
+    font-weight: normal;
+    font-style: normal;
     text-align: center;
-    font-size: 90pt;
+    font-size: 90px;
     color: white;
+    letter-spacing: 0.15px;
+    line-height: 116px;
 }
-.Divider{
+.Divider {
+    
     display: block;
-    margin: 0 auto;
     text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 25px;
+    
 } 
 .Button{
-    display: block;
-    
-   
-    margin-top: 20px;
-    margin-bottom:50px;
-    
-    
+    width: 490px;
+    margin: 0 auto;
 }
 .Button a{
     
-    padding: 20 20;
-    float: left;
-    margin: 0 auto;
-    display: block;
-    background: burlywood;
-    font-size:18px;
+    
+    box-sizing: border-box;
+    font-size:17px;
     color: white;
     display: block;
-    height: 55px;
-    width: 230px;
+    float:left;
+    height: 57px;
+    width: 228px;
     text-decoration: none;
-    text-align: center;
     text-transform: uppercase;
-    margin-left:  40px; 
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 37px;
+    font-family:"Lato";
+    font-weight: normal;
+    
+    letter-spacing: 0.4px;
 }
+.Button a:first-child{
+  background: rgba(0,0,0,0.56);
+  border: 1px solid black;
+}
+.Button a:nth-child(2){
+    background: rgba(255,255,255,0.196);
+    border: 1px solid white;
+  }
+
+.Button a:last-child{
+    margin-left: 30px;
+}
+h2{
+    font-family: "Yeseva One";
+    font-size: 36px;
+    font-weight: normal;
+    color: #cc9900;
+    padding-top: 100px;
+    padding-bottom: 15px;
+}
+.AboutContent{
+    margin-top: 20px;
+    font-family: "Lato";
+    font-size: 15px;
+    font-weight: normal;
+    color:#4c4c4c;
+    line-height: 25px;
+    letter-spacing: .4px;
+    margin-bottom: 45px;
+}
+
 .Background2{
-    background: url(../img/Background2.png) no-repeat center top/cover
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+    background: url(../img/Background2.png) no-repeat center /cover;
+}
+
+.DishPlate{
+    border: red 1px solid;
+   margin-top: 55px;
+}
+
+
+.Background3{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Background3.png) no-repeat center /cover;
+}
+.Ingredient{
+    border-radius: 50%;
+}
+.Ingredients{
+
+    margin-top: 100px;
+    float: right; 
+    background: url(../img/textbackground.png);
+    color: silver;
+    width:570px;
+    height:560px ;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.Background4{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Section-Background4.png) no-repeat center /cover;
+    padding-bottom: 100px;
+    
+}
+
+.left-column{
+    border: red 1px solid;
+text-align: center;
+ float:left;
+ width: 50%;
+
+}
+
+
+.right-column{
+    border: red 1px solid;
+text-align: center;
+    float:right;
+    width: 50%;
+}
+.lefter{
+    margin-left: -25px;
+}
+.leftside{
+    border: red 1px solid;
+    clear: both;
+    float: left;
+    padding-left: 109px;
+}
+
+.rightside{
+    border: red 1px solid;
+    float: right;
+    padding-right: 79px;
+}
+.Divider4{
+    margin-bottom: 18px;
+}
+.Line{
+    display: block;
+    width: 430px;
+}
+ul{
+    list-style-type: none;
+}
+.newLine{
+    clear: both;
+  
+    
+}
+
+.Special{
+    
+    background: url(../img/specialborder.png) no-repeat center top/cover;
+}
+.Background5{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Background4.png) no-repeat center /cover;
+    padding-top: 100px;
+}
+.review{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+    
+    height: 560px;
+    width: 770px;
+    color:yellow;
+    background: url(../img/reviewbg.png) no-repeat center /cover;
+}
+.ColSec{
+    margin-bottom: 100px;
+}
+.Background6{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Section-Background6.png) no-repeat center /cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.aligtextleft{
+text-align: left;
+}
+.centers{
+    margin:0 auto;
+    
+}
+
+.submit1{
+    
+    display: block;
+   margin-top: 40px;
+    
+    
+}
+.footcol{
+   
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 33%;
+    text-align: center;
+    color:green;
+}
+.BackgroundFooter{
+    height: 320px;
+    margin: 0;
+    padding: 0;
+    background: url(../img/backgroundfooter.png) no-repeat center /cover;
+}
+.FooterIcon{
+    margin-left: 10px;
 }
